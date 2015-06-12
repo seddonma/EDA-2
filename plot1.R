@@ -2,7 +2,7 @@
 NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
-## Create a dataframe that shows total emissions for the sample years
+## Creates a dataframe that shows total emissions for the sample years
 tot_em <- ddply(NEI, .(year), summarise, total_emissions = sum(Emissions))
 
 ## Create graph and save it as png file titled "plot1.png"
